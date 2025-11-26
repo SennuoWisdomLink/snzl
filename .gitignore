@@ -1,0 +1,21 @@
+# 依赖包目录（必忽略）
+node_modules/
+# 编译产物
+dist/
+build/
+# 环境变量文件
+.env
+.env.local
+# 日志文件
+logs/
+# 操作系统文件
+.DS_Store
+Thumbs.db
+# 编辑器配置（可选，根据自己的编辑器添加）
+.idea/
+.vscode/
+*.swp
+*.swo
+
+
+

@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 导入Inter字体 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-inter bg-dark text-light antialiased pt-20; /* 为固定导航栏预留空间 */
+  }
+}
+@keyframes slideUpRight {
+    from { 
+      opacity: 0; 
+      transform: translate(-10px, 10px); /* 起始位置：图标内部右下方 */
+    }
+    to { 
+      opacity: 1; 
+      transform: translate(0, 0); /* 目标位置：图标右上角外部 */
+    }
+  } 
+@layer utilities {
+/* 右上角弹出动画：从图标内部向右上方滑出 */
+  .animate-slide-up-right {
+    animation: slideUpRight 0.3s ease-out forwards;
+  }
+  .content-auto {
+    content-visibility: auto;
+  }
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  .bg-glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(8px);
+  }
+  .gradient-overlay {
+    background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,1) 100%);
+  }
+  .nav-active {
+    @apply text-primary font-semibold relative;
+  }
+  .nav-active::after {
+    content: '';
+    @apply absolute bottom-[-4px] left-0 w-full h-0.5 bg-primary rounded;
+  }
+  .input-error {
+    @apply border-error !important;
+  }
+  .error-text {
+    @apply text-error text-sm mt-1;
+  }
+  .success-toast {
+    @apply fixed top-5 left-1/2 -translate-x-1/2 bg-success text-white px-6 py-3 rounded-lg shadow-lg z-50 opacity-0 invisible transition-all duration-300;
+  }
+  .success-toast.show {
+    @apply opacity-100 visible top-8;
+  }
+  /* 修复弹窗基础样式 */
+  .qrcode-container {
+    @apply opacity-0 invisible transition-all duration-300 bg-gradient-to-br from-dark/95 to-secondary/95 
+    rounded-2xl border-2 border-primary/80 p-4 overflow-hidden;
+    /* 移除可能导致拉伸的 height: auto 或 min-height */
+  }
+  .qrcode-container::before {
+    content: '';
+    @apply absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent to-primary/80 via-primary/80 animate-scan;
+  }
+  .qrcode-container::after {
+    content: '';
+    @apply absolute top-0 left-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent to-primary/80 via-primary/80 animate-scan;
+    animation-delay: 1s;
+  }
+  /* 替换弹窗显示动画 */
+  .qrcode-container.show {
+    @apply opacity-100 visible animate-slide-up-right;
+  }
+  .qrcode-title {
+    @apply text-accent text-base font-semibold text-center mt-4 text-shadow-lg tracking-wider;
+  }
+ /* 二维码边框容器 */
+  .qrcode-border {
+    @apply bg-dark rounded-xl relative;
+  }
+ /* 确保二维码图片容器严格正方形 */
+  .w-56 {
+    width: 14rem;
+  }
+  .h-56 {
+    height: 14rem;
+  }
+  
+  /* 新增淡入动画（替代可能导致变形的动画） */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, 10px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  .wechat-icon-hover {
+    @apply transition-all duration-300;
+  }
+  .wechat-icon-hover:hover {
+    @apply transform scale-[1.15] rotate-5 shadow-lg shadow-primary/70 bg-gradient-to-r from-primary to-accent;
+  }
+  /* 核心：统一的滚动动画样式（无重复，兼容PC+移动端） */
+  .animate-on-scroll {
+    @apply opacity-90 translate-y-2 transition-all duration-700 ease-out; /* 初始状态：轻微透明+小幅偏移，不隐藏 */
+  }
+  .animate-on-scroll.visible {
+    @apply opacity-100 translate-y-0; /* 触发后：完全显示 */
+  }
+  .qrcode-corner {
+    @apply absolute w-4 h-4 border-2 border-accent z-10;
+  }
+  .contact-link {
+    @apply text-gray-300 hover:text-primary transition-colors duration-300; /* 新增联系链接样式 */
+  }
+}
+/* 滚动条样式 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1E293B;
+}
+::-webkit-scrollbar-thumb {
+  background: #0EA5E9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0284C7;
+}
+/* 补充样式 */
+section {
+  scroll-margin-top: 90px; /* 滚动定位预留导航栏高度 */
+}
+.nav-link.no-highlight {
+  position: relative !important;
+}
+.nav-link.no-highlight::after {
+  display: none !important;
+}
+.nav-link.no-highlight.nav-active {
+  color: white !important;
+  font-weight: 500 !important;
+}
+.wechat-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+  z-index: 51;
+}
+/* 二维码角落装饰 */
+.qrcode-corner.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 4px 0 0 0;
+}
+.qrcode-corner.top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0 4px 0 0;
+}
+.qrcode-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-radius: 0 0 0 4px;
+}
+.qrcode-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 4px 0;
+}
