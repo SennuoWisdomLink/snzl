@@ -1,5 +1,7 @@
-import { formatWithLocale } from 'date-fns'; // 改用 formatWithLocale
-import { zhCN } from 'date-fns/locale';
+// 直接导入具体函数（避免 tree-shaking 导致的导出问题）
+import format from 'date-fns/format';
+// v2+ 中中文 locale 的正确导入路径（注意是 zh-CN）
+import zhCN from 'date-fns/locale/zh-CN';
 
 /**
  * 格式化日期
@@ -12,9 +14,12 @@ export const formatDate = (
   formatStr: string = 'yyyy-MM-dd HH:mm:ss'
 ): string => {
   try {
-    const targetDate = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
-    // date-fns v1 使用 formatWithLocale，参数顺序：locale, date, formatStr
-    return formatWithLocale(zhCN, targetDate, formatStr);
+    const targetDate = typeof date === 'string' || typeof date === 'number' 
+      ? new Date(date) 
+      : date;
+    
+    // v2+ 中 format 支持第三个参数（options），直接传递 locale
+    return format(targetDate, formatStr, { locale: zhCN });
   } catch (error) {
     console.error('日期格式化失败:', error);
     return '';
