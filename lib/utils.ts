@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { formatWithOptions } from 'date-fns';
 import { zhCN } from 'date-fns/locale';
 
 /**
@@ -13,7 +13,7 @@ export const formatDate = (
 ): string => {
   try {
     const targetDate = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
-    return format(targetDate, formatStr, { locale: zhCN });
+    return formatWithOptions({ locale: zhCN }, targetDate, formatStr);
   } catch (error) {
     console.error('日期格式化失败:', error);
     return '';
