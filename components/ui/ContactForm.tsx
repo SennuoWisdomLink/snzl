@@ -47,7 +47,7 @@ export default function ContactForm() {
   // 提交到飞书
   const submitToFeishu = async () => {
     // 飞书机器人Webhook地址（替换为你的实际地址）
-    const FEISHU_WEBHOOK = 'https://open.feishu.cn/open-apis/bot/v2/hook/67de2815-030f-4b95-986f-dd6564be6b39';
+    const FEISHU_WEBHOOK = 'https://open.feishu.cn/open-apis/bot/v2/hook/4942f0bb-43ec-403a-8602-e0f64c402695';
     
     // 构造飞书消息格式（卡片形式）
     const feishuMessage = {
