@@ -90,7 +90,7 @@ export default function Products() {
   }, []);
 
   return (
-    <section id="products" className="py-20 bg-dark" ref={productsRef}>
+    <section id="products" className="py-20 bg-dark bg-secondary" ref={productsRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
           <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">

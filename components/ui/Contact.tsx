@@ -63,7 +63,7 @@ export default function Contact() {
           <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">
             携手<span className="text-primary">合作</span>，共创未来
           </h2>
-          <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
+          <p className="text-gray-300 leading-relaxed sm:text-lg">
             无论您是需要产品咨询、方案定制还是技术支持，我们的团队都将为您提供专业、高效的服务。
           </p>
         </div>
@@ -71,16 +71,16 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* 联系方式 */}
           <div className="animate-on-scroll">
-            <div className="bg-dark/50 rounded-xl p-8 shadow-lg transition-all duration-500 hover:shadow-primary/20">
-              <h3 className="text-2xl font-bold mb-8">联系方式</h3>
+            <div className="bg-dark/50 rounded-xl p-8 shadow-lg transition-all duration-500 hover:shadow-primary/20 min-h-[680px]">
+              <h3 className="text-2xl font-bold mb-8 ">联系方式</h3>
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary mt-1 flex-shrink-0">
                     <FontAwesomeIcon icon={faMapMarker} className="text-xl" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-2">公司地址</h4>
-                    <p className="text-gray-300">辽宁省大连高新技术产业园区黄浦路533号海创国际产业大厦3002</p>
+                    <h4 className="text-white font-semibold mb-2 sm:text-lg">公司地址</h4>
+                    <p className="text-gray-300 sm:text-lg">辽宁省大连高新技术产业园区黄浦路533号海创国际产业大厦3002</p>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -88,8 +88,8 @@ export default function Contact() {
                     <FontAwesomeIcon icon={faPhone} className="text-xl" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-2">联系电话</h4>
-                    <a  className="text-gray-300">13795159537</a>
+                    <h4 className="text-white font-semibold mb-2 sm:text-lg">联系电话</h4>
+                    <a  className="text-gray-300 sm:text-lg">13795159537</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -97,8 +97,8 @@ export default function Contact() {
                     <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-2">电子邮箱</h4>
-                    <a  className="text-gray-300">noname@snzljcloud.cn</a>
+                    <h4 className="text-white font-semibold mb-2 sm:text-lg">电子邮箱</h4>
+                    <a  className="text-gray-300 sm:text-lg">noname@snzljcloud.cn</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -106,8 +106,8 @@ export default function Contact() {
                     <FontAwesomeIcon icon={faClock} className="text-xl" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold mb-2">工作时间</h4>
-                    <p className="text-gray-300">周一至周五: 9:00-17:00</p>
+                    <h4 className="text-white font-semibold mb-2 sm:text-lg">工作时间</h4>
+                    <p className="text-gray-300 sm:text-lg">周一至周五: 9:00-17:00</p>
                   </div>
                 </li>
               </ul>
@@ -131,7 +131,7 @@ export default function Contact() {
         style={{ 
           position: 'absolute',
           // 关键定位：在图标右上角外部（上移5px，右移5px，避免紧贴）
-          top: '-300px', 
+          top: '-160px', 
           left: 'calc(100% + 5px)', // 从图标右侧外扩5px
           transform: 'translateY(0)', // 取消垂直偏移
           width: '280px',

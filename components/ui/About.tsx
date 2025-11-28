@@ -54,7 +54,7 @@ export default function About() {
           </div>
 
           {/* 文本区域：占全屏宽度，大屏幕下占1/2 */}
-          <div className="w-full lg:w-1/2 animate-on-scroll">
+          <div className="w-full lg:w-2/3 animate-on-scroll">
             <h2 className="text-[clamp(1.4rem,5vw,2.5rem)] font-bold mb-4 sm:mb-6">
               以<span className="text-primary">技术创新</span>驱动，<br />
               打造机器人领域领军品牌
@@ -63,7 +63,7 @@ export default function About() {
               专注于智能机器人研发与应用的高新技术企业，深耕于工业与农业智能化领域，以“技术创新驱动产业升级”为核心使命，致力于通过机器人技术与人工智能的深度融合，为各行业提供高效、安全、精准的智能化解决方案。
             </p>
             <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-lg">
-              作为高新技术产业的重要参与者，森诺智联嘉始终以技术创新为引擎，以产业需求为导向，深度与高校、科研院所、产业伙伴合作，加速技术成果转化，致力于成为智能机器人领域协同创新的典范，为推动产业智能化升级贡献核心技术力量。
+              作为高新技术产业的重要参与者，森诺智联嘉始终以技术创新为引擎，以产业需求为导向，深度与高校、科研院所、产业伙伴合作，加速技术成果转化，致力于成为智能机器人领域协同创新的典范，为推动产业智能化升级贡献核心力量。
             </p>
           </div>
         </div>

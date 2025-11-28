@@ -63,7 +63,7 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#06b6d4]/0 via-[#06b6d4]/5 to-[#06b6d4]/0 opacity-0 group-hover:opacity-100 transition-opacity"></div>
               </div>
               
-              <p className="text-[#94a3b8] text-sm leading-tight">
+              <p className="text-[#94a3b8] text-sm leading-tight text-center">
                 大连市人工智能产业协会会员单位<br />
               </p>
             </div>
