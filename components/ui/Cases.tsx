@@ -115,16 +115,16 @@ export default function Cases() {
   return (
     <section id="cases" className="py-20 bg-dark" ref={casesRef}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
+        <div className="text-center max-w-3xl mx-auto mb-10 animate-on-scroll">
           <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">
             赋能<span className="text-primary">各行业</span>客户价值提升
           </h2>
-          <p className="text-gray-300 leading-relaxed">
-            已为汽车、电子、物流、医疗等多个行业的知名企业提供智能机器人解决方案，获得客户高度认可
+          <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
+            已为多个行业的知名企业提供智能机器人解决方案，获得客户高度认可。
           </p>
         </div>
         
-        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll">
+        <div className="flex flex-wrap justify-center gap-4 mb-8 animate-on-scroll">
           {filters.map((filter) => (
             <button
               key={filter.value}

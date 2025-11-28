@@ -96,7 +96,7 @@ export default function Products() {
           <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">
             多元化<span className="text-primary">机器人产品矩阵</span>
           </h2>
-          <p className="text-gray-300 leading-relaxed">
+          <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
             针对不同行业场景需求，研发覆盖便民服务、商业表演、科学教育的全系列智能机器人产品，提供灵活可靠的自动化解决方案。
           </p>
         </div>

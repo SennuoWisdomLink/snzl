@@ -63,8 +63,8 @@ export default function Contact() {
           <h2 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-6">
             携手<span className="text-primary">合作</span>，共创未来
           </h2>
-          <p className="text-gray-300 leading-relaxed">
-            无论您是需要产品咨询、方案定制还是技术支持，我们的团队都将为您提供专业、高效的服务
+          <p className="text-gray-300 leading-relaxed text-sm sm:text-lg">
+            无论您是需要产品咨询、方案定制还是技术支持，我们的团队都将为您提供专业、高效的服务。
           </p>
         </div>
         
@@ -89,7 +89,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-2">联系电话</h4>
-                    <a href="tel:13795159537" className="contact-link">13795159537</a>
+                    <a  className="text-gray-300">13795159537</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -98,7 +98,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold mb-2">电子邮箱</h4>
-                    <a href="mailto:noname@snzljcloud.cn" className="contact-link">noname@snzljcloud.cn</a>
+                    <a  className="text-gray-300">noname@snzljcloud.cn</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
