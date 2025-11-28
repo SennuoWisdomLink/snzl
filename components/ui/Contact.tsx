@@ -157,7 +157,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="qrcode-title mt-3 text-center">
-          扫码添加微信咨询
+          扫码关注微信公众号
         </div>
       </div>
     </div>

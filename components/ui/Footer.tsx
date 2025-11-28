@@ -146,7 +146,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <FontAwesomeIcon icon={faMapMarker} className="text-[#06b6d4] mt-1 shrink-0 text-sm" />
                   <span className="text-[#94a3b8] leading-tight">
-                    辽宁省大连高新技术产业园区黄浦路533号<br />海创国际产业大厦3002
+                    辽宁省大连高新技术产业园区黄浦路533号-海创国际产业大厦3002
                   </span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -173,7 +173,7 @@ export default function Footer() {
         {/* 底部版权（科技感分割线） */}
         <div className="pt-8 border-t border-[#1e40af]/30 flex flex-col md:flex-row justify-between items-center">
           <p className="text-[#64748b] text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} 森诺智联机器人技术有限公司. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]">All Rights Reserved</span>
+            &copy; {new Date().getFullYear()} 森诺智联嘉(大连)高新产业技术研究有限公司. <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#06b6d4] to-[#8b5cf6]">All Rights Reserved</span>
           </p>
           <div className="flex gap-6">
             <a href="/privacy-policy" className="text-[#64748b] hover:text-[#06b6d4] transition-colors text-sm">隐私政策</a>
