@@ -112,16 +112,14 @@ export default function Footer() {
               </h4>
               <ul className="space-y-3">
                 {[
-                  '工业协作机器人',
-                  'AGV移动机器人',
-                  '智能服务机器人',
-                  'SCARA机器人',
-                  '机器视觉系统',
+                  '人形表演机器人',
+                  '教育智能机器人',
+                  '商用清洁机器人',
+                  '安保巡检机器人',
+                  '展厅导览机器人',
                 ].map((product) => (
                   <li key={product}>
-                    <a 
-                      href="#products" 
-                      className="text-[#94a3b8] hover:text-[#22c55e] transition-colors text-sm flex items-center gap-2
+                    <a className="text-[#94a3b8] hover:text-[#22c55e] transition-colors text-sm flex items-center gap-2
                                relative group-hover:before:w-full before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 before:bg-gradient-to-r before:from-[#22c55e] before:to-[#06b6d4] before:transition-all before:duration-300"
                     >
                       <span className="w-1 h-1 bg-[#22c55e] rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
@@ -151,13 +149,13 @@ export default function Footer() {
                 </li>
                 <li className="flex items-start gap-3">
                   <FontAwesomeIcon icon={faPhone} className="text-[#22c55e] mt-1 shrink-0 text-sm" />
-                  <a href="tel:13795159537" className="text-[#94a3b8] hover:text-[#22c55e] transition-colors">
+                  <a  className="text-[#94a3b8] hover:text-[#22c55e] transition-colors">
                     13795159537
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
                   <FontAwesomeIcon icon={faEnvelope} className="text-[#8b5cf6] mt-1 shrink-0 text-sm" />
-                  <a href="mailto:noname@snzljcloud.cn" className="text-[#94a3b8] hover:text-[#8b5cf6] transition-colors">
+                  <a className="text-[#94a3b8] hover:text-[#8b5cf6] transition-colors">
                     noname@snzljcloud.cn
                   </a>
                 </li>

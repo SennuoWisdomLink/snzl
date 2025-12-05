@@ -14,8 +14,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [{"name": "next"}]
-    // 移除所有路径别名配置！避免 Windows 路径冲突
+    "plugins": [{"name": "next"}],
+    // 新增路径别名配置（解决@/导入问题）
+    "baseUrl": ".", 
+    "paths": {
+      "@/*": ["./*"] 
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
