@@ -27,7 +27,7 @@ const staticProducts: Product[] = [
     description: '搭载精准律动控制与仿生关节设计的人形机器人，可完成灵动舞蹈、创意姿态等多元化舞台表演，带来沉浸式视觉体验。',
     image: '/images/man-robot.png',
     features: [
-      '16+自由度仿生关节设计',
+      '16+自由度仿生关节',
       '精准动作捕捉与复刻',
       '多机协同编队表演',
       '自定义动作编程',

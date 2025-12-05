@@ -119,67 +119,55 @@ export default function About() {
                   />
                 </div>
 
-                {/* 核心优势卡片 - 优化图标样式 */}
-                <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-5 border border-purple-500/10 hover:border-purple-500/30 hover:shadow-[0_0_20px_rgba(139,92,246,0.1)] transition-all duration-300">
+                {/* 核心优势卡片 - 优化图标样式（统一风格） */}
+                <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl p-5 border border-cyan-500/10 hover:border-cyan-500/30 hover:shadow-[0_0_20px_rgba(0,255,255,0.1)] transition-all duration-300">
                   <h3 className="text-white font-semibold text-lg lg:text-xl mb-4 flex items-center gap-2">
-                    <span className="w-1 h-5 bg-purple-400 rounded-full"></span>
+                    <span className="w-1 h-5 bg-cyan-400 rounded-full"></span>
                     核心优势
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {[
                       { 
                         icon: faLightbulb, 
-                        color: 'cyan', 
-                        text: '技术创新',
-                        gradient: 'from-cyan-900/40 to-cyan-800/40',
-                        glow: 'shadow-[0_0_15px_rgba(0,255,255,0.2)]'
+                        text: '技术创新'
                       },
                       { 
                         icon: faShieldHalved, 
-                        color: 'blue', 
-                        text: '安全可靠',
-                        gradient: 'from-blue-900/40 to-blue-800/40',
-                        glow: 'shadow-[0_0_15px_rgba(59,130,246,0.2)]'
+                        text: '安全可靠'
                       },
                       { 
                         icon: faChartLine, 
-                        color: 'purple', 
-                        text: '高效智能',
-                        gradient: 'from-purple-900/40 to-purple-800/40',
-                        glow: 'shadow-[0_0_15px_rgba(139,92,246,0.2)]'
+                        text: '高效智能'
                       },
                       { 
                         icon: faCogs, 
-                        color: 'teal', 
-                        text: '定制服务',
-                        gradient: 'from-teal-900/40 to-teal-800/40',
-                        glow: 'shadow-[0_0_15px_rgba(20,184,166,0.2)]'
+                        text: '定制服务'
                       }
                     ].map((item, idx) => (
                       <div 
                         key={idx} 
                         className="flex items-center gap-4 group cursor-pointer transition-all duration-300 hover:translate-x-1"
                       >
-                        {/* 优化后的图标容器 */}
+                        {/* 统一风格的图标容器 */}
                         <div className={`
                           w-10 h-10 rounded-full 
-                          bg-gradient-to-br ${item.gradient} 
+                          bg-gradient-to-br from-cyan-900/40 to-blue-900/40 
                           flex items-center justify-center 
-                          border border-${item.color}-500/30 
-                          ${item.glow}
-                          group-hover:border-${item.color}-400/60 
-                          group-hover:shadow-[0_0_20px_rgba(var(--tw-shadow-color),0.4)]
+                          border border-cyan-500/30 
+                          shadow-[0_0_15px_rgba(0,255,255,0.2)]
+                          group-hover:border-cyan-400/60 
+                          group-hover:shadow-[0_0_20px_rgba(0,255,255,0.4)]
                           transition-all duration-300
                           relative overflow-hidden
                         `}>
                           {/* 内部发光效果 */}
                           <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           
-                          {/* 图标 */}
+                          {/* 统一颜色的图标 */}
                           <FontAwesomeIcon 
                             icon={item.icon} 
                             className={`
-                              text-${item.color}-400 
+                              text-cyan-400 
                               text-lg 
                               group-hover:scale-110 
                               group-hover:rotate-6
@@ -187,10 +175,10 @@ export default function About() {
                             `} 
                           />
                           
-                          {/* 脉冲动画效果 */}
+                          {/* 统一脉冲动画 */}
                           <div className={`
                             absolute inset-0 rounded-full 
-                            border-2 border-${item.color}-400/30 
+                            border-2 border-cyan-400/30 
                             animate-ping 
                             opacity-0 group-hover:opacity-100
                             transition-opacity duration-300
@@ -198,7 +186,7 @@ export default function About() {
                         </div>
                         
                         {/* 文字 */}
-                        <h4 className="text-white text-sm font-medium group-hover:text-opacity-100 transition-all duration-300">
+                        <h4 className="text-white text-sm font-medium group-hover:text-cyan-300 transition-all duration-300">
                           {item.text}
                         </h4>
                       </div>
